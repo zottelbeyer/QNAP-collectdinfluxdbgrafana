@@ -2,7 +2,7 @@ version: '3'
 
 services:  
   collectd:
-    container_name: qnap-collectd2
+    container_name: qnap-collectd
     image: qnap-collectd
     build: ./qnap-collectd/
     privileged: true
