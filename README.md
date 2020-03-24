@@ -9,22 +9,26 @@
 
 - ssh into your QNAP-NAS
 
+```
+ssh admin@[YOURNASIP]
+```
 
-    ssh admin@[YOURNASIP]
-
-- Assuming you are using Containerstation: Download git repo to your /Container share
+- Assuming you are using Containerstation: Download git repo to your /Container share and extract it.
 
 
-    cd /share/Container
-    wget https://github.com/zottelbeyer/QNAP-collectdinfluxdbgrafana/archive/master.zip
-    unzip QNAP-collectdinfluxdbgrafana-master.zip
-    cd QNAP-collectdinfluxdbgrafana-master
+```
+cd /share/Container
+wget https://github.com/zottelbeyer/QNAP-collectdinfluxdbgrafana/archive/master.zip
+unzip QNAP-collectdinfluxdbgrafana-master.zip
+cd QNAP-collectdinfluxdbgrafana-master
+```
+
 
 - Start the Docker-Compose
 
-
+```
     docker-compose up -d --build
-
+```
 
 - Open your browser to [YOURNASIP]:3000
 - Login in with default credentials "user" "password"
@@ -37,6 +41,14 @@
 **A Note on Security**
 
 This repo is not yet optimized to be secure. Use at your own risk and **DO NOT EXPOSE IT TO THE INTERNET!**
+
+**Dashboard**
+
+The Dasboard itself can be found at https://grafana.com/grafana/dashboards/11968
+
+**Testing**
+
+This setup has been tested on a TS-832X with 8 Disks and a NVMe SSD Cache. Let me know if this config works for you.
 
 Sources Utilized:
 - https://github.com/signalfx/docker-collectd
