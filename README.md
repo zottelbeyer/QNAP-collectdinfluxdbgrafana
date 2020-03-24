@@ -3,7 +3,7 @@
 ![Dashboard Image](https://i.imgur.com/zK1JTRe.png)
 
 **Prerequisites**
-- [Enable SNMPv2](https://docs.qnap.com/nas/QTS4.4.1/ENG/GUID-1309558B-BFEF-496D-B2DE-6B48D0DE528F.html) on your QNAP with the default Community "QNAP-collectd" and Trap address "[YOURNASIP]"
+- [Enable SNMPv2](https://docs.qnap.com/nas/QTS4.4.1/ENG/GUID-1309558B-BFEF-496D-B2DE-6B48D0DE528F.html) on your QNAP with the default Community "snmp-collectd" and Trap address "[YOURNASIP]"
 - [Enable SSH](https://docs.qnap.com/nas/QTS4.4.1/ENG/GUID-F27FD4D2-154F-4D9C-B0B1-7121544F427F.html) on your QNAP and ssh into your NAS
 - Install the ContainerStation application to have access to docker and docker-compose on your QNAP
 
