@@ -1,6 +1,6 @@
 ## QNAP Collectd Influxdb Grafana Container and Dashboard
 
-![Dashboard Image](https://i.imgur.com/zK1JTRe.png)
+![Dashboard Image](https://i.imgur.com/vXSI9NL.png)
 
 **Prerequisites**
 - [Enable SNMPv2](https://docs.qnap.com/nas/QTS4.4.1/ENG/GUID-1309558B-BFEF-496D-B2DE-6B48D0DE528F.html) on your QNAP with the default Community "snmp-collectd" and Trap address "[YOURNASIP]"
@@ -54,9 +54,9 @@ This setup has been tested on my TS-832X with 8 Disks and a NVMe SSD Cache. Let 
 
 **Known Issues/ToDo**
 
-- [ ] Add SNMP Values for Cache Hit-Rate
+- [x] Add SNMP Values for Cache Hit-Rate
 - [ ] Add SNMP Values for NVMe Temp
-- [ ] Add SNMP Values for FAN RPM
+- [x] Add SNMP Values for FAN RPM
 - [ ] Workaround collectd.conf not being able to use Docker ENVs
 
 Sources Utilized:
