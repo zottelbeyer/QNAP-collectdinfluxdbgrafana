@@ -1,0 +1,11 @@
+apiVersion: 1
+
+datasources:
+  - name: InfluxDB
+    type: influxdb
+    access: proxy
+    orgID: 1
+    database: collectd
+    url: http://influxdb:8086
+    isDefault: True
+    version: 1
