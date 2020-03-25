@@ -32,7 +32,7 @@ cd QNAP-collectdinfluxdbgrafana-master
     docker-compose up -d --build
 ```
 
-- Open your browser to [YOURNASIP]:3000
+- Open your browser to [YOURNASIP]:3000/dashboards and open the QNAP-collectd Dashboard
 - Login in with default credentials "user" "password"
 
 **Modifying**
