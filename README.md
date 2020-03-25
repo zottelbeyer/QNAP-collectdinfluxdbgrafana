@@ -21,7 +21,7 @@ ssh admin@[YOURNASIP]
 ```
 cd /share/Container
 wget https://github.com/zottelbeyer/QNAP-collectdinfluxdbgrafana/archive/master.zip
-unzip QNAP-collectdinfluxdbgrafana-master.zip
+unzip master.zip
 cd QNAP-collectdinfluxdbgrafana-master
 ```
 
