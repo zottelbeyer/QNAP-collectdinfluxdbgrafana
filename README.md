@@ -34,6 +34,8 @@ cd QNAP-collectdinfluxdbgrafana-master
 
 - Open your browser to [YOURNASIP]:3000/dashboards and open the QNAP-collectd Dashboard
 - Login in with default credentials "user" "password"
+- On the Dashboard select ALL in the Dropdown Menues at the top
+- Select a refresh rate suiting your needs
 
 **Modifying**
 
@@ -47,6 +49,31 @@ This repo is not yet optimized to be secure. Use at your own risk and **DO NOT E
 **Dashboard**
 
 The Dasboard itself can be found at https://grafana.com/grafana/dashboards/11968
+
+**Troubleshooting**
+
+If your Dashboard doesn't show any data proceed in these steps:
+
+1. Restart your collectd container
+```
+# ssh into your NAS
+docker restart qnap-collectd
+```
+2. Check influxdb is getting data from collectd
+```
+ssh into your NAS
+docker exec -it influxdb /bin/bash
+influx
+> use collectd
+> show series
+# should return lots of entries
+```
+3. Check the connection between Grafana and InfluxDB
+```
+Open your browser to http://[YOURNASIP]:3000/datasources/edit/1/
+Run the built in Connection test
+```
+4. Open an Issue including the results
 
 **Testing**
 
