@@ -61,7 +61,7 @@ docker restart qnap-collectd
 ```
 2. Check influxdb is getting data from collectd
 ```
-ssh into your NAS
+# ssh into your NAS
 docker exec -it influxdb /bin/bash
 influx
 > use collectd
