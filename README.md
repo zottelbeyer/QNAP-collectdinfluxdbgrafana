@@ -1,6 +1,6 @@
 ## QNAP Collectd Influxdb Grafana Container and Dashboard
 
-![Dashboard Image](https://i.imgur.com/vXSI9NL.png)
+![Dashboard Image](https://i.imgur.com/i4Dwf4l.png)
 
 **Prerequisites**
 - [Enable SNMPv2](https://docs.qnap.com/nas/QTS4.4.1/ENG/GUID-1309558B-BFEF-496D-B2DE-6B48D0DE528F.html) on your QNAP with the default Community "snmp-collectd" and Trap address "[YOURNASIP]"
