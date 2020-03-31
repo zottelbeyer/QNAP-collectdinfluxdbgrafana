@@ -7,5 +7,7 @@ datasources:
     orgID: 1
     database: collectd
     url: http://influxdb:8086
+    jsonData:
+      httpMode: GET
     isDefault: True
     version: 1
