@@ -10,11 +10,10 @@ services:
     volumes:
       - /:/rootfs/:ro
       - ./qnap-collectd/collectd.conf.d:/etc/collectd/collectd.conf.d/:ro    
-      
 
   influxdb:
     container_name: influxdb
-    image: influxdb:1.7
+    image: influxdb:1.8
     ports:
       - "8086:8086"
       - "25826:25826/udp"
@@ -25,8 +24,7 @@ services:
     volumes:
       - ./influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
       - ./influxdb/types.db:/usr/share/collectd/types.db
-      - ./influxdb-data:/var/lib/influxdb
-      
+      - ./influxdb-data:/var/lib/influxdb      
 
   grafana:
     container_name: grafana
@@ -42,5 +40,3 @@ services:
       - ./grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboard.yaml
       - ./grafana/QNAP-collectd.json:/var/lib/grafana/dashboards/QNAP-collectd.json
       - ./grafana-data:/var/lib/grafana
-
-    
