@@ -41,6 +41,19 @@ cd QNAP-collectdinfluxdbgrafana-master
 - Select a refresh rate suiting your needs
 - Wait another 2 minutes for all panels to be populated
 
+**Updating**
+
+Requires a git installation with access to the location of your cloned directory.
+
+```
+# Stop the Containers and remove old images.
+docker-compose down --rmi all
+# get updates from git repo (with another machine if necessary)
+git pull
+# rebuild the stack
+docker-compose up -d --build
+```
+
 **Modifying**
 
 - You can change the default Grafana Username/Password in the .env file
