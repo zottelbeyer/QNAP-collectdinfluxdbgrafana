@@ -16,8 +16,8 @@
   "editable": true,
   "gnetId": 11968,
   "graphTooltip": 0,
-  "id": 6,
-  "iteration": 1585290781307,
+  "id": 10,
+  "iteration": 1587043070901,
   "links": [
     {
       "$$hashKey": "object:556",
@@ -674,7 +674,7 @@
         "colorMode": "value",
         "fieldOptions": {
           "calcs": [
-            "lastNotNull"
+            "max"
           ],
           "defaults": {
             "mappings": [
@@ -718,7 +718,7 @@
         "justifyMode": "auto",
         "orientation": "auto"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "6.7.2",
       "repeat": null,
       "repeatDirection": "h",
       "targets": [
@@ -736,6 +736,12 @@
                 "type_instance"
               ],
               "type": "tag"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
             }
           ],
           "hide": false,
@@ -817,7 +823,7 @@
         "colorMode": "value",
         "fieldOptions": {
           "calcs": [
-            "lastNotNull"
+            "max"
           ],
           "defaults": {
             "mappings": [
@@ -858,7 +864,7 @@
         "justifyMode": "auto",
         "orientation": "horizontal"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "dsType": "influxdb",
@@ -941,7 +947,7 @@
         "colorMode": "value",
         "fieldOptions": {
           "calcs": [
-            "lastNotNull"
+            "max"
           ],
           "defaults": {
             "mappings": [
@@ -982,7 +988,7 @@
         "justifyMode": "auto",
         "orientation": "horizontal"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "dsType": "influxdb",
@@ -1059,7 +1065,7 @@
         "colorMode": "value",
         "fieldOptions": {
           "calcs": [
-            "lastNotNull"
+            "max"
           ],
           "defaults": {
             "decimals": 1,
@@ -1101,7 +1107,7 @@
         "justifyMode": "auto",
         "orientation": "horizontal"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "dsType": "influxdb",
@@ -1178,7 +1184,7 @@
         "colorMode": "value",
         "fieldOptions": {
           "calcs": [
-            "lastNotNull"
+            "max"
           ],
           "defaults": {
             "mappings": [
@@ -1219,7 +1225,7 @@
         "justifyMode": "auto",
         "orientation": "horizontal"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "dsType": "influxdb",
@@ -1296,13 +1302,13 @@
         "y": 11
       },
       "id": 9,
-      "interval": "60s",
+      "interval": "30s",
       "links": [],
       "options": {
         "colorMode": "value",
         "fieldOptions": {
           "calcs": [
-            "lastNotNull"
+            "max"
           ],
           "defaults": {
             "decimals": 1,
@@ -1315,7 +1321,7 @@
                 "value": "null"
               }
             ],
-            "max": 1000000000,
+            "max": 130000000,
             "min": 0,
             "nullValueMode": "connected",
             "thresholds": {
@@ -1326,12 +1332,16 @@
                   "value": null
                 },
                 {
+                  "color": "#EAB839",
+                  "value": 40000000
+                },
+                {
                   "color": "rgba(237, 129, 40, 0.89)",
-                  "value": 100000000
+                  "value": 50000000
                 },
                 {
                   "color": "#d44a3a",
-                  "value": 300000000
+                  "value": 90000000
                 }
               ]
             },
@@ -1344,7 +1354,7 @@
         "justifyMode": "auto",
         "orientation": "horizontal"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "dsType": "influxdb",
@@ -1422,13 +1432,13 @@
         "y": 11
       },
       "id": 10,
-      "interval": "60s",
+      "interval": "30s",
       "links": [],
       "options": {
         "colorMode": "value",
         "fieldOptions": {
           "calcs": [
-            "lastNotNull"
+            "max"
           ],
           "defaults": {
             "decimals": 1,
@@ -1441,7 +1451,7 @@
                 "value": "null"
               }
             ],
-            "max": 1000000000,
+            "max": 130000000,
             "min": 0,
             "nullValueMode": "connected",
             "thresholds": {
@@ -1452,16 +1462,16 @@
                   "value": null
                 },
                 {
-                  "color": "rgba(237, 129, 40, 0.89)",
-                  "value": 400000
+                  "color": "yellow",
+                  "value": 40000000
                 },
                 {
-                  "color": "#EAB839",
-                  "value": 2000000
+                  "color": "orange",
+                  "value": 60000000
                 },
                 {
                   "color": "#d44a3a",
-                  "value": 800000000
+                  "value": 90000000
                 }
               ]
             },
@@ -1474,7 +1484,7 @@
         "justifyMode": "auto",
         "orientation": "horizontal"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "dsType": "influxdb",
@@ -1556,7 +1566,7 @@
         "colorMode": "value",
         "fieldOptions": {
           "calcs": [
-            "lastNotNull"
+            "max"
           ],
           "defaults": {
             "decimals": 0,
@@ -1594,7 +1604,7 @@
         "justifyMode": "auto",
         "orientation": "vertical"
       },
-      "pluginVersion": "6.7.1",
+      "pluginVersion": "6.7.2",
       "targets": [
         {
           "alias": "$tag_type_instance",
@@ -1673,7 +1683,15 @@
       "type": "row"
     },
     {
-      "aliasColors": {},
+      "aliasColors": {
+        "Load long": "red",
+        "Load mid": "yellow",
+        "Load short": "green",
+        "cpu0": "semi-dark-green",
+        "cpu1": "yellow",
+        "cpu2": "red",
+        "cpu3": "semi-dark-blue"
+      },
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -1694,6 +1712,8 @@
         "alignAsTable": true,
         "avg": false,
         "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
         "max": false,
         "min": false,
         "rightSide": true,
@@ -1704,7 +1724,7 @@
       "lines": true,
       "linewidth": 2,
       "links": [],
-      "nullPointMode": "connected",
+      "nullPointMode": "null",
       "options": {
         "dataLinks": []
       },
@@ -1714,21 +1734,22 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:5374",
           "alias": "/cpu/",
           "bars": true,
-          "fillGradient": 3,
           "lines": false,
-          "stack": true,
-          "zindex": -3
+          "zindex": 0
         },
         {
+          "$$hashKey": "object:5375",
           "alias": "/Load/",
-          "lines": true,
-          "yaxis": 2
+          "stack": false,
+          "yaxis": 2,
+          "zindex": 1
         }
       ],
       "spaceLength": 10,
-      "stack": false,
+      "stack": true,
       "steppedLine": false,
       "targets": [
         {
@@ -1953,6 +1974,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:5404",
           "decimals": 0,
           "format": "percent",
           "label": "",
@@ -1962,9 +1984,10 @@
           "show": true
         },
         {
+          "$$hashKey": "object:5405",
           "decimals": 0,
           "format": "none",
-          "label": null,
+          "label": "",
           "logBase": 1,
           "max": null,
           "min": "0",
@@ -1972,13 +1995,15 @@
         }
       ],
       "yaxis": {
-        "align": false,
+        "align": true,
         "alignLevel": null
       }
     },
     {
-      "aliasColors": {},
-      "bars": false,
+      "aliasColors": {
+        "wait": "light-purple"
+      },
+      "bars": true,
       "dashLength": 10,
       "dashes": false,
       "datasource": "InfluxDB",
@@ -1997,6 +2022,8 @@
       "legend": {
         "avg": false,
         "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
         "max": false,
         "min": false,
         "rightSide": false,
@@ -2017,26 +2044,14 @@
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "/cpu*/",
-          "fill": 0,
-          "lines": true,
-          "linewidth": 2,
-          "stack": false,
-          "yaxis": 2,
-          "zindex": 3
-        },
-        {
+          "$$hashKey": "object:521",
           "alias": "idle",
+          "bars": false,
           "fill": 0,
           "lines": true,
           "linewidth": 2,
           "stack": false,
           "zindex": 2
-        },
-        {
-          "alias": "/(interrupt|nice|system|user)/",
-          "bars": true,
-          "stack": true
         }
       ],
       "spaceLength": 10,
@@ -2061,7 +2076,7 @@
             },
             {
               "params": [
-                "none"
+                "null"
               ],
               "type": "fill"
             }
@@ -2081,7 +2096,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "mean"
               }
             ]
           ],
@@ -2120,15 +2135,17 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:567",
           "decimals": null,
           "format": "percent",
           "label": "",
           "logBase": 1,
-          "max": "110",
+          "max": "100",
           "min": "0",
           "show": true
         },
         {
+          "$$hashKey": "object:568",
           "format": "percent",
           "label": null,
           "logBase": 1,
@@ -2163,7 +2180,8 @@
       "legend": {
         "avg": false,
         "current": false,
-        "hideEmpty": false,
+        "hideEmpty": true,
+        "hideZero": true,
         "max": false,
         "min": false,
         "rightSide": false,
@@ -2335,7 +2353,7 @@
       "tooltip": {
         "shared": true,
         "sort": 0,
-        "value_type": "cumulative"
+        "value_type": "individual"
       },
       "type": "graph",
       "xaxis": {
@@ -2378,7 +2396,7 @@
       "dashes": false,
       "datasource": "InfluxDB",
       "decimals": 1,
-      "fill": 0,
+      "fill": 1,
       "fillGradient": 0,
       "gridPos": {
         "h": 7,
@@ -2417,7 +2435,7 @@
       "seriesOverrides": [
         {
           "$$hashKey": "object:657",
-          "alias": "/recieve/",
+          "alias": "/receive/",
           "transform": "negative-Y"
         }
       ],
@@ -2426,7 +2444,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_instance (recieve)",
+          "alias": "$tag_instance (send)",
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -2448,10 +2466,10 @@
               "type": "fill"
             }
           ],
-          "measurement": "interface_rx",
+          "measurement": "interface_tx",
           "orderByTime": "ASC",
           "policy": "default",
-          "refId": "A",
+          "refId": "B",
           "resultFormat": "time_series",
           "select": [
             [
@@ -2494,7 +2512,7 @@
           ]
         },
         {
-          "alias": "$tag_instance (send)",
+          "alias": "$tag_instance (receive)",
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -2516,10 +2534,10 @@
               "type": "fill"
             }
           ],
-          "measurement": "interface_tx",
+          "measurement": "interface_rx",
           "orderByTime": "ASC",
           "policy": "default",
-          "refId": "B",
+          "refId": "A",
           "resultFormat": "time_series",
           "select": [
             [
@@ -2614,8 +2632,8 @@
       "datasource": "InfluxDB",
       "decimals": 1,
       "description": "",
-      "fill": 1,
-      "fillGradient": 3,
+      "fill": 0,
+      "fillGradient": 0,
       "gridPos": {
         "h": 14,
         "w": 12,
@@ -2640,7 +2658,7 @@
         "total": false,
         "values": true
       },
-      "lines": true,
+      "lines": false,
       "linewidth": 2,
       "links": [],
       "nullPointMode": "null",
@@ -2660,7 +2678,7 @@
         {
           "$$hashKey": "object:2901",
           "alias": "/hitrate/",
-          "bars": false,
+          "color": "#1F60C4",
           "yaxis": 2
         }
       ],
@@ -2830,6 +2848,7 @@
               "type": "fill"
             }
           ],
+          "hide": true,
           "measurement": "snmp_value",
           "orderByTime": "ASC",
           "policy": "default",
@@ -2879,7 +2898,7 @@
       "yaxes": [
         {
           "$$hashKey": "object:2924",
-          "decimals": 1,
+          "decimals": 0,
           "format": "Bps",
           "label": "",
           "logBase": 1,
@@ -2904,11 +2923,14 @@
       }
     },
     {
-      "aliasColors": {},
+      "aliasColors": {
+        "reserved": "purple"
+      },
       "bars": false,
       "dashLength": 10,
       "dashes": false,
       "datasource": "InfluxDB",
+      "decimals": 2,
       "fill": 4,
       "fillGradient": 0,
       "gridPos": {
@@ -2924,6 +2946,8 @@
       "legend": {
         "avg": false,
         "current": false,
+        "hideEmpty": true,
+        "hideZero": true,
         "max": false,
         "min": false,
         "rightSide": false,
@@ -2946,12 +2970,14 @@
         {
           "$$hashKey": "object:2405",
           "alias": "/free/",
-          "color": "#73BF69"
+          "color": "#73BF69",
+          "zindex": 3
         },
         {
           "$$hashKey": "object:2406",
-          "alias": "/(reserved|used)/",
-          "color": "#FF9830"
+          "alias": "/used/",
+          "color": "#FF9830",
+          "zindex": 2
         }
       ],
       "spaceLength": 10,
@@ -2959,7 +2985,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "alias": "$tag_type_instance $tag_instance",
+          "alias": "$tag_instance $tag_type_instance",
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -2979,12 +3005,6 @@
                 "instance"
               ],
               "type": "tag"
-            },
-            {
-              "params": [
-                "null"
-              ],
-              "type": "fill"
             }
           ],
           "measurement": "df_value",
@@ -3004,7 +3024,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "mean"
               }
             ]
           ],
@@ -3037,7 +3057,7 @@
       "tooltip": {
         "shared": true,
         "sort": 0,
-        "value_type": "cumulative"
+        "value_type": "individual"
       },
       "type": "graph",
       "xaxis": {
@@ -3051,7 +3071,7 @@
         {
           "$$hashKey": "object:2451",
           "decimals": 0,
-          "format": "decbytes",
+          "format": "bits",
           "label": "",
           "logBase": 1,
           "max": null,
@@ -3062,7 +3082,7 @@
           "$$hashKey": "object:2452",
           "decimals": 0,
           "format": "percent",
-          "label": null,
+          "label": "",
           "logBase": 1,
           "max": "100",
           "min": "0",
@@ -3070,22 +3090,15 @@
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": true,
+        "alignLevel": 0
       }
     }
   ],
-  "refresh": "5m",
+  "refresh": "1m",
   "schemaVersion": 22,
   "style": "dark",
-  "tags": [
-    "os",
-    "cpu",
-    "ram",
-    "disk",
-    "net",
-    "collectd"
-  ],
+  "tags": [],
   "templating": {
     "list": [
       {
@@ -3293,7 +3306,7 @@
   },
   "time": {
     "from": "now-6h",
-    "to": "now"
+    "to": "now-1m"
   },
   "timepicker": {
     "hidden": false,
@@ -3320,9 +3333,9 @@
   },
   "timezone": "",
   "title": "QNAP-collectd",
-  "uid": "mlo0cBXWk",
+  "uid": "ys0uzUrZz",
   "variables": {
     "list": []
   },
-  "version": 103
+  "version": 19
 }
