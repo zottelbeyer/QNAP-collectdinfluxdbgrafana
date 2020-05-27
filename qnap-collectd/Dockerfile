@@ -14,6 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
 	snmp-mibs-downloader \
  && make -C /usr/src/rootfs_prefix/ \
  && apt-get -yq --purge remove build-essential \
+ && apt-get -yq autoremove \
  && apt-get -yq clean \
  && rm -rf /var/lib/apt/lists/* \
  && rm -rf /etc/apt/sources.list.d/*
