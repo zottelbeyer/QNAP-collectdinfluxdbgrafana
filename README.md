@@ -1,6 +1,6 @@
 ## QNAP Collectd Influxdb Grafana Container and Dashboard
 
-![Dashboard Image](https://i.imgur.com/i4Dwf4l.png)
+![Dashboard Image](https://i.imgur.com/gKffwjj.png)
 
 **Prerequisites**
 - [Enable SNMPv2](https://docs.qnap.com/nas/QTS4.4.1/ENG/GUID-1309558B-BFEF-496D-B2DE-6B48D0DE528F.html) on your QNAP with the default Community "snmp-collectd" and Trap address "[YOURNASIP]"
@@ -58,6 +58,7 @@ docker-compose up -d --build
 
 - You can change the default Grafana Username/Password in the .env file
 - You can modify the collectd config by editing qnap-collectd/collectd.conf.d/sample.conf
+- To modify the Dashboard you will have to make a copy: Settings - Save As
 
 **A Note on Security**
 
@@ -65,7 +66,7 @@ This repo is not yet optimized to be secure. Use at your own risk and **DO NOT E
 
 **Dashboard**
 
-The Dasboard itself can be found at https://grafana.com/grafana/dashboards/11968
+The Dasboard itself can be found at https://grafana.com/grafana/dashboards/11968 or in the folder /grafana/QNAP-collectd-external.json
 
 **Troubleshooting**
 
