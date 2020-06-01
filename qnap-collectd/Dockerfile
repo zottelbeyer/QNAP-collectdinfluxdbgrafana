@@ -1,5 +1,7 @@
 FROM debian:buster
 
+WORKDIR qnap-collectd
+
 COPY rootfs_prefix/ /usr/src/rootfs_prefix/
 COPY sources.list.d/nonfree.list /etc/apt/sources.list.d/nonfree.list
 COPY collectd.conf /etc/collectd/collectd.conf
