@@ -30,7 +30,7 @@ cd QNAP-collectdinfluxdbgrafana-master
 - Start the Docker-Compose
 
 ```
-    docker-compose up -d --build
+    docker-compose up -d
 ```
 
 - **Wait 2 minutes for influxdb to create the database and become ready**
@@ -99,10 +99,10 @@ This setup has been tested on my TS-832X with 8 Disks and a NVMe SSD Cache. Let 
 
 **Known Issues/ToDo**
 
-- [x] Add SNMP Values for Cache Hit-Rate
 - [ ] Add SNMP Values for NVMe Temp
-- [x] Add SNMP Values for FAN RPM
-- [ ] Workaround collectd.conf not being able to use Docker ENVs
+- [ ] Workaround collectd.conf not being able to use Docker ENVs?
+- [ ] Secure the communication with backend network in docker-compose.yml
+- [ ]  issues?
 
 Sources Utilized:
 - Many different collectd docker containers
