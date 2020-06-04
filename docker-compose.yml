@@ -3,8 +3,7 @@ version: '3'
 services:  
   collectd:
     container_name: qnap-collectd
-    image: qnap-collectd
-    build: ./qnap-collectd/
+    image: zottelbeyer/qnap-collectd:latest
     privileged: true
     network_mode: host
     volumes:
@@ -28,7 +27,7 @@ services:
 
   grafana:
     container_name: grafana
-    image: grafana/grafana:7.0.1
+    image: grafana/grafana:7.0.3
     user: "root"
     environment:
       GF_SECURITY_ADMIN_USER: ${GF_SECURITY_ADMIN_USER}
