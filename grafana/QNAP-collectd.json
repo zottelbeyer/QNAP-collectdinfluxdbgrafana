@@ -693,7 +693,7 @@
           "values": false
         }
       },
-      "pluginVersion": "7.0.1",
+      "pluginVersion": "7.0.6",
       "repeat": null,
       "repeatDirection": "h",
       "targets": [
@@ -835,7 +835,7 @@
           "values": false
         }
       },
-      "pluginVersion": "7.0.1",
+      "pluginVersion": "7.0.6",
       "targets": [
         {
           "dsType": "influxdb",
@@ -962,7 +962,7 @@
           "values": false
         }
       },
-      "pluginVersion": "7.0.1",
+      "pluginVersion": "7.0.6",
       "targets": [
         {
           "dsType": "influxdb",
@@ -1091,7 +1091,7 @@
           "values": false
         }
       },
-      "pluginVersion": "7.0.1",
+      "pluginVersion": "7.0.6",
       "targets": [
         {
           "dsType": "influxdb",
@@ -1211,7 +1211,7 @@
         },
         "showUnfilled": true
       },
-      "pluginVersion": "7.0.1",
+      "pluginVersion": "7.0.6",
       "targets": [
         {
           "alias": "$tag_instance",
@@ -1350,7 +1350,7 @@
           "values": false
         }
       },
-      "pluginVersion": "7.0.1",
+      "pluginVersion": "7.0.6",
       "targets": [
         {
           "alias": "$tag_instance",
@@ -1498,7 +1498,7 @@
           "values": false
         }
       },
-      "pluginVersion": "7.0.1",
+      "pluginVersion": "7.0.6",
       "targets": [
         {
           "alias": "$tag_instance",
@@ -1634,7 +1634,7 @@
           "values": false
         }
       },
-      "pluginVersion": "7.0.1",
+      "pluginVersion": "7.0.6",
       "targets": [
         {
           "alias": "$tag_type_instance",
@@ -2267,7 +2267,7 @@
           }
         ],
         "query": "SHOW TAG VALUES FROM \"snmp_value\" WITH KEY = \"type_instance\" WHERE \"type\" = 'temperature' AND \"host\" =~ /$hostname/",
-        "refresh": 0,
+        "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
         "sort": 3,
