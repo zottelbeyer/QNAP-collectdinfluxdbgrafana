@@ -27,7 +27,7 @@ services:
 
   grafana:
     container_name: grafana
-    image: grafana/grafana:7.0.5
+    image: grafana/grafana:7.0.6
     user: "root"
     environment:
       GF_SECURITY_ADMIN_USER: ${GF_SECURITY_ADMIN_USER}
