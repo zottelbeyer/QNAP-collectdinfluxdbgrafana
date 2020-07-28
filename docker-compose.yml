@@ -9,6 +9,7 @@ services:
     volumes:
       - /:/rootfs/:ro
       - ./qnap-collectd/collectd.conf.d:/etc/collectd/collectd.conf.d/:ro    
+    restart: unless-stopped
 
   influxdb:
     container_name: influxdb
@@ -23,7 +24,8 @@ services:
     volumes:
       - ./influxdb/influxdb.conf:/etc/influxdb/influxdb.conf
       - ./influxdb/types.db:/usr/share/collectd/types.db
-      - ./influxdb-data:/var/lib/influxdb      
+      - ./influxdb-data:/var/lib/influxdb       
+    restart: unless-stopped
 
   grafana:
     container_name: grafana
@@ -39,3 +41,4 @@ services:
       - ./grafana/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboard.yaml
       - ./grafana/QNAP-collectd.json:/var/lib/grafana/dashboards/QNAP-collectd.json
       - ./grafana-data:/var/lib/grafana
+    restart: unless-stopped
