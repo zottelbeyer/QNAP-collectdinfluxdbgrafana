@@ -11,3 +11,5 @@ datasources:
       httpMode: GET
     isDefault: True
     version: 1
+    uid: 9s_d_298c
+    editable: true

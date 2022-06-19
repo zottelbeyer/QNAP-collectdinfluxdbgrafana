@@ -4,25 +4,38 @@
       {
         "$$hashKey": "object:315",
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+        "datasource": {
+          "type": "datasource",
+          "uid": "grafana"
+        },
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
   },
   "editable": true,
+  "fiscalYearStartMonth": 0,
   "gnetId": 11968,
   "graphTooltip": 0,
-  "id": 16,
-  "iteration": 1590564649318,
+  "iteration": 1655646919765,
   "links": [],
+  "liveNow": false,
   "panels": [
     {
       "collapsed": false,
-      "datasource": null,
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -46,12 +59,15 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "decimals": 1,
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "links": []
         },
         "overrides": []
       },
@@ -77,7 +93,6 @@
         "min": false,
         "rightSide": true,
         "show": true,
-        "sideWidth": null,
         "total": false,
         "values": true
       },
@@ -86,13 +101,13 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "9.0.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
-      "repeat": null,
       "seriesOverrides": [
         {
           "$$hashKey": "object:2900",
@@ -316,9 +331,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Disk IOPS",
       "tooltip": {
         "shared": true,
@@ -327,9 +340,7 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
@@ -340,8 +351,6 @@
           "format": "Bps",
           "label": "",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
@@ -356,8 +365,7 @@
         }
       ],
       "yaxis": {
-        "align": true,
-        "alignLevel": null
+        "align": true
       }
     },
     {
@@ -365,11 +373,14 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "decimals": 1,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "links": []
         },
         "overrides": []
       },
@@ -403,9 +414,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "9.0.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -422,6 +434,10 @@
       "targets": [
         {
           "alias": "$tag_instance (send)",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -458,7 +474,7 @@
               },
               {
                 "params": [],
-                "type": "last"
+                "type": "mean"
               },
               {
                 "params": [
@@ -497,6 +513,10 @@
         },
         {
           "alias": "$tag_instance (receive)",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -533,7 +553,7 @@
               },
               {
                 "params": [],
-                "type": "last"
+                "type": "mean"
               },
               {
                 "params": [
@@ -571,9 +591,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Network bandwidth",
       "tooltip": {
         "shared": true,
@@ -583,9 +601,7 @@
       "transformations": [],
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
@@ -596,8 +612,6 @@
           "format": "Bps",
           "label": "",
           "logBase": 1,
-          "max": null,
-          "min": null,
           "show": true
         },
         {
@@ -605,19 +619,20 @@
           "format": "bytes",
           "label": "",
           "logBase": 1,
-          "max": null,
           "min": "0",
           "show": false
         }
       ],
       "yaxis": {
-        "align": true,
-        "alignLevel": null
+        "align": true
       }
     },
     {
       "collapsed": false,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -630,22 +645,24 @@
       "type": "row"
     },
     {
-      "cacheTimeout": null,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
             }
           ],
-          "nullValueMode": "connected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -690,15 +707,20 @@
           "calcs": [
             "lastNotNull"
           ],
+          "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.6",
-      "repeat": null,
+      "pluginVersion": "9.0.0",
       "repeatDirection": "h",
       "targets": [
         {
           "alias": "$tag_type_instance",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "groupBy": [
             {
               "params": [
@@ -737,7 +759,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "last"
               }
             ]
           ],
@@ -762,14 +784,15 @@
           ]
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Temperature",
       "type": "stat"
     },
     {
       "collapsed": false,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -778,21 +801,20 @@
       },
       "id": 28,
       "panels": [],
-      "repeat": null,
       "title": "Usage",
       "type": "row"
     },
     {
-      "cacheTimeout": null,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "decimals": 1,
           "mappings": [],
           "max": 100,
           "min": 0,
-          "nullValueMode": "connected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -832,12 +854,18 @@
           "calcs": [
             "lastNotNull"
           ],
+          "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.6",
+      "pluginVersion": "9.0.0",
       "targets": [
         {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -868,7 +896,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "last"
               },
               {
                 "params": [
@@ -903,23 +931,25 @@
       "type": "stat"
     },
     {
-      "cacheTimeout": null,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
             }
           ],
           "max": 100,
           "min": 0,
-          "nullValueMode": "connected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -959,12 +989,18 @@
           "calcs": [
             "lastNotNull"
           ],
+          "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.6",
+      "pluginVersion": "9.0.0",
       "targets": [
         {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -995,7 +1031,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "last"
               },
               {
                 "params": [
@@ -1026,29 +1062,30 @@
           ]
         }
       ],
-      "timeFrom": null,
       "title": "RAM",
       "type": "stat"
     },
     {
-      "cacheTimeout": null,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "decimals": 1,
           "mappings": [
             {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
             }
           ],
           "max": 100,
           "min": 0,
-          "nullValueMode": "connected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1088,12 +1125,18 @@
           "calcs": [
             "max"
           ],
+          "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.6",
+      "pluginVersion": "9.0.0",
       "targets": [
         {
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -1124,7 +1167,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "last"
               }
             ]
           ],
@@ -1153,23 +1196,25 @@
       "type": "stat"
     },
     {
-      "cacheTimeout": null,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "mappings": [
             {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
             }
           ],
           "max": 100,
           "min": 0,
-          "nullValueMode": "connected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1202,19 +1247,26 @@
       "links": [],
       "options": {
         "displayMode": "basic",
+        "minVizHeight": 10,
+        "minVizWidth": 0,
         "orientation": "horizontal",
         "reduceOptions": {
           "calcs": [
             "lastNotNull"
           ],
+          "fields": "",
           "values": false
         },
         "showUnfilled": true
       },
-      "pluginVersion": "7.0.6",
+      "pluginVersion": "9.0.0",
       "targets": [
         {
           "alias": "$tag_instance",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -1251,7 +1303,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "last"
               }
             ]
           ],
@@ -1282,28 +1334,29 @@
           ]
         }
       ],
-      "timeFrom": null,
       "title": "DISK Usage",
       "type": "bargauge"
     },
     {
-      "cacheTimeout": null,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "decimals": 1,
           "mappings": [
             {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
             }
           ],
           "min": 0,
-          "nullValueMode": "connected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1347,13 +1400,19 @@
           "calcs": [
             "lastNotNull"
           ],
+          "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.6",
+      "pluginVersion": "9.0.0",
       "targets": [
         {
           "alias": "$tag_instance",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -1391,7 +1450,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "last"
               },
               {
                 "params": [
@@ -1428,29 +1487,30 @@
           ]
         }
       ],
-      "timeFrom": null,
       "title": "DOWNLOAD",
       "type": "stat"
     },
     {
-      "cacheTimeout": null,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "decimals": 1,
           "mappings": [
             {
-              "id": 0,
-              "op": "=",
-              "text": "N/A",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "N/A"
+                }
+              },
+              "type": "special"
             }
           ],
           "max": 130000000,
           "min": 0,
-          "nullValueMode": "connected",
           "thresholds": {
             "mode": "absolute",
             "steps": [
@@ -1494,14 +1554,20 @@
           "calcs": [
             "lastNotNull"
           ],
+          "fields": "",
           "limit": 1,
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.6",
+      "pluginVersion": "9.0.0",
       "targets": [
         {
           "alias": "$tag_instance",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -1538,7 +1604,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "last"
               },
               {
                 "params": [
@@ -1575,15 +1641,16 @@
           ]
         }
       ],
-      "timeFrom": null,
       "title": "UPLOAD",
       "type": "stat"
     },
     {
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "fieldConfig": {
         "defaults": {
-          "custom": {},
           "decimals": 0,
           "displayName": " ",
           "mappings": [],
@@ -1631,13 +1698,19 @@
           "calcs": [
             "max"
           ],
+          "fields": "",
           "values": false
-        }
+        },
+        "textMode": "auto"
       },
-      "pluginVersion": "7.0.6",
+      "pluginVersion": "9.0.0",
       "targets": [
         {
           "alias": "$tag_type_instance",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "groupBy": [
             {
               "params": [
@@ -1673,7 +1746,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "last"
               }
             ]
           ],
@@ -1692,14 +1765,15 @@
           ]
         }
       ],
-      "timeFrom": null,
-      "timeShift": null,
       "title": "Fans",
       "type": "stat"
     },
     {
       "collapsed": false,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1708,7 +1782,6 @@
       },
       "id": 29,
       "panels": [],
-      "repeat": null,
       "title": "Metrics",
       "type": "row"
     },
@@ -1719,10 +1792,13 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "links": []
         },
         "overrides": []
       },
@@ -1755,9 +1831,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": false,
+      "pluginVersion": "9.0.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1765,11 +1842,8 @@
         {
           "$$hashKey": "object:521",
           "alias": "idle",
-          "bars": false,
           "fill": 0,
-          "lines": true,
           "linewidth": 2,
-          "stack": false,
           "zindex": 2
         }
       ],
@@ -1779,6 +1853,10 @@
       "targets": [
         {
           "alias": "$tag_type_instance",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -1815,7 +1893,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "last"
               }
             ]
           ],
@@ -1835,9 +1913,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "CPU usage",
       "tooltip": {
         "shared": true,
@@ -1846,16 +1922,13 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
           "$$hashKey": "object:567",
-          "decimals": null,
           "format": "percent",
           "label": "",
           "logBase": 1,
@@ -1866,7 +1939,6 @@
         {
           "$$hashKey": "object:568",
           "format": "percent",
-          "label": null,
           "logBase": 1,
           "max": "110",
           "min": "0",
@@ -1874,8 +1946,7 @@
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     },
     {
@@ -1883,10 +1954,13 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB",
+      "datasource": {
+        "type": "influxdb",
+        "uid": "9s_d_298c"
+      },
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "links": []
         },
         "overrides": []
       },
@@ -1919,9 +1993,10 @@
       "links": [],
       "nullPointMode": "null",
       "options": {
-        "dataLinks": []
+        "alertThreshold": true
       },
       "percentage": true,
+      "pluginVersion": "9.0.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1945,6 +2020,10 @@
       "targets": [
         {
           "alias": "memory $tag_type_instance",
+          "datasource": {
+            "type": "influxdb",
+            "uid": "9s_d_298c"
+          },
           "dsType": "influxdb",
           "groupBy": [
             {
@@ -1981,7 +2060,7 @@
               },
               {
                 "params": [],
-                "type": "max"
+                "type": "last"
               }
             ]
           ],
@@ -2013,9 +2092,7 @@
         }
       ],
       "thresholds": [],
-      "timeFrom": null,
       "timeRegions": [],
-      "timeShift": null,
       "title": "Memory usage",
       "tooltip": {
         "shared": true,
@@ -2024,16 +2101,13 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
         "mode": "time",
-        "name": null,
         "show": true,
         "values": []
       },
       "yaxes": [
         {
           "$$hashKey": "object:2047",
-          "decimals": null,
           "format": "percent",
           "label": "",
           "logBase": 1,
@@ -2044,7 +2118,6 @@
         {
           "$$hashKey": "object:2048",
           "format": "percent",
-          "label": null,
           "logBase": 1,
           "max": "110",
           "min": "0",
@@ -2052,27 +2125,30 @@
         }
       ],
       "yaxis": {
-        "align": false,
-        "alignLevel": null
+        "align": false
       }
     }
   ],
   "refresh": "5m",
-  "schemaVersion": 25,
+  "schemaVersion": 36,
   "style": "dark",
   "tags": [],
   "templating": {
     "list": [
       {
-        "allValue": null,
         "current": {
           "selected": true,
-          "text": "QNAP-collectd",
+          "text": [
+            "QNAP-collectd"
+          ],
           "value": [
             "QNAP-collectd"
           ]
         },
-        "datasource": "InfluxDB",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "9s_d_298c"
+        },
         "definition": "SHOW TAG VALUES FROM \"uptime_value\" WITH KEY = \"host\"",
         "hide": 0,
         "includeAll": true,
@@ -2086,22 +2162,24 @@
         "skipUrlSync": false,
         "sort": 1,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
       {
-        "allValue": null,
         "current": {
           "selected": true,
-          "tags": [],
-          "text": "All",
+          "text": [
+            "All"
+          ],
           "value": [
             "$__all"
           ]
         },
-        "datasource": "InfluxDB",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "9s_d_298c"
+        },
         "definition": "SHOW TAG VALUES FROM \"interface_rx\" WITH KEY = \"instance\" WHERE \"host\" =~ /$hostname/",
         "hide": 0,
         "includeAll": true,
@@ -2115,22 +2193,24 @@
         "skipUrlSync": false,
         "sort": 1,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
       {
-        "allValue": null,
         "current": {
           "selected": true,
-          "tags": [],
-          "text": "All",
+          "text": [
+            "All"
+          ],
           "value": [
             "$__all"
           ]
         },
-        "datasource": "InfluxDB",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "9s_d_298c"
+        },
         "definition": "",
         "hide": 0,
         "includeAll": true,
@@ -2144,21 +2224,24 @@
         "skipUrlSync": false,
         "sort": 1,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
       },
       {
-        "allValue": null,
         "current": {
           "selected": true,
-          "text": "All",
+          "text": [
+            "All"
+          ],
           "value": [
             "$__all"
           ]
         },
-        "datasource": "InfluxDB",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "9s_d_298c"
+        },
         "definition": "SHOW TAG VALUES FROM \"df_value\" WITH KEY = \"instance\" WHERE \"host\" =~ /$hostname/",
         "hide": 0,
         "includeAll": true,
@@ -2172,7 +2255,6 @@
         "skipUrlSync": false,
         "sort": 1,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
@@ -2180,99 +2262,31 @@
       {
         "allValue": "",
         "current": {
-          "text": "All",
+          "selected": true,
+          "text": [
+            "All"
+          ],
           "value": [
             "$__all"
           ]
         },
-        "datasource": "InfluxDB",
+        "datasource": {
+          "type": "influxdb",
+          "uid": "9s_d_298c"
+        },
         "definition": "SHOW TAG VALUES FROM \"snmp_value\" WITH KEY = \"type_instance\" WHERE \"type\" = 'temperature' AND \"host\" =~ /$hostname/",
         "hide": 0,
         "includeAll": true,
         "label": "Temperature",
         "multi": true,
         "name": "temperature",
-        "options": [
-          {
-            "$$hashKey": "object:740",
-            "selected": true,
-            "text": "All",
-            "value": "$__all"
-          },
-          {
-            "$$hashKey": "object:741",
-            "selected": false,
-            "text": "cpu",
-            "value": "cpu"
-          },
-          {
-            "$$hashKey": "object:742",
-            "selected": false,
-            "text": "enclosure",
-            "value": "enclosure"
-          },
-          {
-            "$$hashKey": "object:743",
-            "selected": false,
-            "text": "system",
-            "value": "system"
-          },
-          {
-            "$$hashKey": "object:744",
-            "selected": false,
-            "text": "hdd1",
-            "value": "hdd1"
-          },
-          {
-            "$$hashKey": "object:745",
-            "selected": false,
-            "text": "hdd2",
-            "value": "hdd2"
-          },
-          {
-            "$$hashKey": "object:746",
-            "selected": false,
-            "text": "hdd3",
-            "value": "hdd3"
-          },
-          {
-            "$$hashKey": "object:747",
-            "selected": false,
-            "text": "hdd4",
-            "value": "hdd4"
-          },
-          {
-            "$$hashKey": "object:748",
-            "selected": false,
-            "text": "hdd5",
-            "value": "hdd5"
-          },
-          {
-            "$$hashKey": "object:749",
-            "selected": false,
-            "text": "hdd6",
-            "value": "hdd6"
-          },
-          {
-            "$$hashKey": "object:750",
-            "selected": false,
-            "text": "hdd7",
-            "value": "hdd7"
-          },
-          {
-            "$$hashKey": "object:751",
-            "selected": false,
-            "text": "hdd8",
-            "value": "hdd8"
-          }
-        ],
+        "options": [],
         "query": "SHOW TAG VALUES FROM \"snmp_value\" WITH KEY = \"type_instance\" WHERE \"type\" = 'temperature' AND \"host\" =~ /$hostname/",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
         "sort": 3,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
@@ -2309,5 +2323,6 @@
   "timezone": "",
   "title": "QNAP-collectd",
   "uid": "VlSjNtkMk",
-  "version": 2
+  "version": 6,
+  "weekStart": ""
 }
