@@ -6,7 +6,7 @@
 - [Enable SNMPv2](https://docs.qnap.com/nas/QTS4.4.1/ENG/GUID-1309558B-BFEF-496D-B2DE-6B48D0DE528F.html) on your QNAP with the default Community "snmp-collectd" and Trap address "[YOURNASIP]"
 - [Enable SSH](https://docs.qnap.com/nas/QTS4.4.1/ENG/GUID-F27FD4D2-154F-4D9C-B0B1-7121544F427F.html) on your QNAP and ssh into your NAS
 - Make sure your [System Time](https://docs.qnap.com/nas/QTS4.4.1/ENG/GUID-F0F0940F-E013-4056-B6BF-A74DC32B5A3F.html) is set correctly and adjusted for [daylight savings](https://docs.qnap.com/nas/QTS4.4.1/ENG/GUID-13394239-A1B1-4FD3-B7A7-F7100617D78F.html)
-- Install the ContainerStation application to have access to docker and docker-compose on your QNAP
+- Install the ContainerStation application to have access to docker and docker compose on your QNAP
 
 **Getting started:**
 
@@ -27,10 +27,10 @@ cd QNAP-collectdinfluxdbgrafana-master
 ```
 
 
-- Start the Docker-Compose
+- Start the Docker Compose
 
 ```
-    docker-compose up -d
+    docker compose up -d
 ```
 
 - **Wait 2 minutes for influxdb to create the database and become ready**
@@ -47,11 +47,11 @@ Requires a git installation with access to the location of your cloned directory
 
 ```
 # Stop the Containers and remove old images.
-docker-compose down --rmi all
+docker compose down --rmi all
 # get updates from git repo (with another machine if necessary)
 git pull
 # rebuild the stack
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 **Modifying**
@@ -101,7 +101,7 @@ This setup has been tested on my TS-832X with 8 Disks and a NVMe SSD Cache. Let 
 
 - [ ] Add SNMP Values for NVMe Temp
 - [ ] Workaround collectd.conf not being able to use Docker ENVs?
-- [ ] Secure the communication with backend network in docker-compose.yml
+- [ ] Secure the communication with backend network in docker compose.yml
 - [ ]  issues?
 
 Sources Utilized:
